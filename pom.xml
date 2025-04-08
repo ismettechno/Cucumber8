@@ -20,12 +20,14 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.30.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.20.1</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -39,6 +41,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>7.20.1</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
