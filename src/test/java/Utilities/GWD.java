@@ -20,4 +20,25 @@ public class GWD {
        return driver;
    }
 
+
+   public static void quitDriver()
+   {
+       //test sonucu ekranı bir miktar beklesin diye
+       try {
+           Thread.sleep(5000);
+       } catch (InterruptedException e) {
+           throw new RuntimeException(e);
+       }
+
+       if (driver != null) // var ise
+       {
+           driver.quit();
+           driver=null;
+       }
+   }
+
+
+
+
+
 }
