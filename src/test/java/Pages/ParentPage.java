@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ParentPage {
-    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+    public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
     public void mySendKeys(WebElement e, String  text)
     {
         wait.until(ExpectedConditions.visibilityOf(e));
-        // elemente kadar scroll yap
+        scrollToElement(e);
         e.clear();
         e.sendKeys(text);
     }
@@ -22,10 +22,15 @@ public class ParentPage {
     public void myClick(WebElement e)
     {
         wait.until(ExpectedConditions.elementToBeClickable(e));
-        // elemente kadar scroll yap
+        scrollToElement(e);
         e.click();
     }
 
+    //elemente kadar scroll yap
+    public void scrollToElement(WebElement element){
+        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].scrollIntoView();", element);
+    }
 
 
 }

@@ -5,6 +5,7 @@ import Utilities.GWD;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -33,8 +34,8 @@ public class _01_LoginSteps {
 
     @Then("User should login successfully")
     public void user_should_login_successfully() {
-        System.out.println("login olduğumu doğruladım");
-        //assert
+        dc.wait.until(ExpectedConditions.textToBePresentInElement(dc.headText, "Internship"));
+        Assert.assertTrue(dc.headText.getText().equals("Internship"));
     }
 
 
