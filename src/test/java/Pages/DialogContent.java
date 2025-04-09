@@ -23,6 +23,17 @@ public class DialogContent extends ParentPage{
     @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement headText;
 
+    @FindBy(xpath="")
+    public WebElement addButton;
+
+    @FindBy(xpath="")
+    public WebElement nameInput;
+
+    @FindBy(xpath="")
+    public WebElement codeInput;
+
+    @FindBy(xpath="")
+    public WebElement saveButton;
 
 
 }
