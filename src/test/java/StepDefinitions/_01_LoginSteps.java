@@ -26,8 +26,8 @@ public class _01_LoginSteps {
 //        dc.password.sendKeys("TS.%=2025TR");
 //        dc.loginButton.click();
 
-        dc.mySendKeys(dc.username, "turkeyts");
-        dc.mySendKeys(dc.password, "TS.%=2025TR");
+        dc.mySendKeys(dc.username, "Campus25");
+        dc.mySendKeys(dc.password, "Campus.2524");
         dc.myClick(dc.loginButton);
 
     }

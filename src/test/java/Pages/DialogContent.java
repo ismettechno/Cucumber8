@@ -26,13 +26,13 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     public WebElement addButton;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//*[formcontrolname='name']//input")
     public WebElement nameInput;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//*[@formcontrolname='code']//input")
     public WebElement codeInput;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//ms-save-button[@class='ng-star-inserted']//button")
     public WebElement saveButton;
 
 
