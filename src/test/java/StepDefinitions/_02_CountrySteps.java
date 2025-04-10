@@ -33,8 +33,7 @@ public class _02_CountrySteps {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.successMessage));
-        Assert.assertTrue(dc.successMessage.getText().contains("successfully"));
+        dc.verifyMessageContainsText(dc.successMessage, "successfully");
     }
 
 }
