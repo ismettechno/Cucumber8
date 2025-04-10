@@ -6,6 +6,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class _02_CountrySteps {
     LeftNav ln = new LeftNav();
@@ -31,7 +33,8 @@ public class _02_CountrySteps {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.successMessage));
+        Assert.assertTrue(dc.successMessage.getText().contains("successfully"));
     }
 
 }
