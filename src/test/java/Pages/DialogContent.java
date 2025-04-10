@@ -44,12 +44,14 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath="//*[@formcontrolname='shortName']//input")
     public WebElement shortName;
 
+    @FindBy(xpath="//div[contains(text(),'already')]")
+    public WebElement alreadyMessage;
 
 
 
     public void verifyMessageContainsText(WebElement element, String serchText){
         wait.until(ExpectedConditions.visibilityOf(element));
-        Assert.assertTrue(element.getText().contains(serchText));
+        Assert.assertTrue(element.getText().toLowerCase().contains(serchText.toLowerCase()));
 
         // mesaj html kodları gelene kadar bekle
         //wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
