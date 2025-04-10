@@ -44,6 +44,11 @@ public class _03_CitizenShipSteps {
 
     @When("user delete name as {string}")
     public void userDeleteNameAs(String name) {
+        dc.mySendKeys(dc.searchInput,  name);
+        dc.myClick(dc.searchButton);
 
+        //TODO : buraya bir bekletme koymak
+        dc.myClick(dc.deleteImageBtn);
+        dc.myClick(dc.deleteDialogBtn);
     }
 }

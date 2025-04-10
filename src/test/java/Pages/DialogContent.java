@@ -47,6 +47,17 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath="//div[contains(text(),'already')]")
     public WebElement alreadyMessage;
 
+    @FindBy(xpath="//ms-text-field/input[@placeholder='Name']")
+    public WebElement searchInput;
+
+    @FindBy(xpath="//ms-search-button/div/button")
+    public WebElement searchButton;
+
+    @FindBy(xpath="//ms-delete-button//button")
+    public WebElement deleteImageBtn;
+
+    @FindBy(xpath="//button[@type='submit']")
+    public WebElement deleteDialogBtn;
 
 
     public void verifyMessageContainsText(WebElement element, String serchText){
