@@ -17,9 +17,12 @@ Feature:  Citizenship Functionality
     Then Success message should be displayed
 
     Examples:
-      | name | shortName |
+      | name       | shortName |
       | ismet1CS11 | ics1kod11 |
       | ismet1CS12 | ics1kod12 |
       | ismet1CS13 | ics1kod13 |
       | ismet1CS14 | ics1kod14 |
       | ismet1CS15 | ics1kod15 |
+
+         #  dataProvider (TestNG için), Senaryo Outline (cucumber)
+         #  görevi verilen her değer için, tüm senayo çalışır
