@@ -1,6 +1,6 @@
 # Country menusu create,delete olarak,
 # Senaryo outline şeklinde 5 kez çalıştırınız
-
+# Bu senaryoda country delete de yazılım hatası mevcut
 Feature:  Country Functionality
 
   Background:
