@@ -2,10 +2,14 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class _03_CitizenShipSteps {
     LeftNav ln=new LeftNav();
@@ -44,11 +48,6 @@ public class _03_CitizenShipSteps {
 
     @When("user delete name as {string}")
     public void userDeleteNameAs(String name) {
-        dc.mySendKeys(dc.searchInput,  name);
-        dc.myClick(dc.searchButton);
-
-        //TODO : buraya bir bekletme koymak
-        dc.myClick(dc.deleteImageBtn);
-        dc.myClick(dc.deleteDialogBtn);
+       dc.deleteItem(name);
     }
 }
