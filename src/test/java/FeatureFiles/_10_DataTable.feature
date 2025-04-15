@@ -51,8 +51,8 @@ Feature: DataTable Functionality
   Scenario: CitizenShip Functionality
 
     And Click on the Element LeftNav
-      | setup         |
-      | parameters    |
+      | setup       |
+      | parameters  |
       | citizenship |
 
     And Click on the Element Dialog
