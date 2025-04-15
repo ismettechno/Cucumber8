@@ -25,7 +25,7 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
 
-  Scenario: Create Nationality Functionality
+  Scenario: Nationality Functionality
 
     And Click on the Element LeftNav
       | setup         |
@@ -36,7 +36,7 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | ismetNat12111 |
+      | nameInput | ismetNat121111 |
 
     And User sending the Enter keys in Dialog
 
@@ -46,4 +46,47 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
     And User delete the element from dialog
-      | ismetNat12111 |
+      | ismetNat121111 |
+
+  Scenario: CitizenShip Functionality
+
+    And Click on the Element LeftNav
+      | setup         |
+      | parameters    |
+      | citizenship |
+
+    And Click on the Element Dialog
+      | addButton |
+
+    And User sending the keys in Dialog
+      | nameInput | ismeCS111 |
+      | shortName | ismeKodC1 |
+
+    And Click on the Element Dialog
+      | saveButton |
+
+    Then Success message should be displayed
+
+    And User delete the element from dialog
+      | ismeCS111 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
