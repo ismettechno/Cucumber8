@@ -20,6 +20,7 @@ public class _04_DatatableOrnekSteps {
     @And("write username as Datatable")
     public void writeUsernameAsDatatable(DataTable userlar) {
         List<String> listUserlar=userlar.asList();
+
         for (String username : listUserlar)
             System.out.println(username);
     }

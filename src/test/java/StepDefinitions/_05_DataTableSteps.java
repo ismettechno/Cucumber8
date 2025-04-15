@@ -2,8 +2,11 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -18,7 +21,6 @@ public class _05_DataTableSteps {
         for (int i = 0; i < listLinkler.size(); i++) {
             ln.myClick(  ln.getWebElement(listLinkler.get(i))  );
         }
-
     }
 
     @And("Click on the Element Dialog")
@@ -38,6 +40,21 @@ public class _05_DataTableSteps {
             dc.mySendKeys( dc.getWebElement(listkutuVeYazi.get(i).get(0) ),
                            listkutuVeYazi.get(i).get(1) );
         }
+    }
 
+
+    @And("User delete the element from dialog")
+    public void userDeleteTheElementFromDialog(DataTable silinecekler) {
+        List<String> listSilinecekler= silinecekler.asList();
+
+        for (int i = 0; i < listSilinecekler.size(); i++) {
+            dc.deleteItem( listSilinecekler.get(i) );
+        }
+
+    }
+
+    @And("User sending the Enter keys in Dialog")
+    public void userSendingTheEnterKeysInDialog() {
+        new Actions(GWD.getDriver()).sendKeys(Keys.ENTER).build().perform();
     }
 }

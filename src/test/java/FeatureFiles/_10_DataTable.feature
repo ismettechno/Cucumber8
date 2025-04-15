@@ -22,6 +22,8 @@ Feature: DataTable Functionality
     And Click on the Element Dialog
       | saveButton |
 
+    Then Success message should be displayed
+
 
   Scenario: Create Nationality Functionality
 
@@ -34,7 +36,14 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | ismetNat1911 |
+      | nameInput | ismetNat12111 |
+
+    And User sending the Enter keys in Dialog
 
     And Click on the Element Dialog
       | saveButton |
+
+    Then Success message should be displayed
+
+    And User delete the element from dialog
+      | ismetNat12111 |
