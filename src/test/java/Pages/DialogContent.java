@@ -61,6 +61,12 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    public WebElement integrationCode;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']//input")
+    public WebElement priorityCode;
+
 
     public void verifyMessageContainsText(WebElement element, String serchText){
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -93,6 +99,8 @@ public class DialogContent extends ParentPage{
             case "nameInput" : return this.nameInput;
             case "codeInput" : return this.codeInput;
             case "shortName" : return this.shortName;
+            case "integrationCode" : return this.integrationCode;
+            case "priorityCode" : return this.priorityCode;
         }
 
         return null;

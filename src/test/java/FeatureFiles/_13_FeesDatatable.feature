@@ -1,24 +1,26 @@
-# Nationality fonksiyonlarını 5 farklı değer için çalıştırıp test ediniz
-
-Feature: Nationality Functionality Datatable - Senaryo Outline
+# Fees menusunu Create ve Delete fonksiyonlarını test ediniz
+Feature: Fees functionality
 
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario Outline: Nationality Create and Delete
+  Scenario: Fees create and delete functionality
 
     And Click on the Element LeftNav
-      | setup         |
-      | parameters    |
-      | nationalities |
+      | setup      |
+      | parameters |
+      | fees       |
 
     And Click on the Element Dialog
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | <name> |
+      | nameInput       | ism2Fee21 |
+      | codeInput       | 23941     |
+      | integrationCode | Crypto    |
+      | priorityCode    | 42435     |
 
     And User sending the Enter keys in Dialog
 
@@ -28,12 +30,4 @@ Feature: Nationality Functionality Datatable - Senaryo Outline
     Then Success message should be displayed
 
     And User delete the element from dialog
-      | <name> |
-
-    Examples:
-      | name         |
-      | ismetNat5411 |
-      | ismetNat5412 |
-      | ismetNat5413 |
-      | ismetNat5414 |
-      | ismetNat5415 |
+      | ism2Fee21 |
