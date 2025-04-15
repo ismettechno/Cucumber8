@@ -1,0 +1,12 @@
+1- Cities menusunu 5 farklı değerler için
+   Create ve Delete fonksiyonlarını test ediniz
+
+2- inventory -> setup -> item Category
+   menusunu 5 farklı değerler için
+   Create ve Delete fonksiyonlarını test ediniz
+
+3- #Senaryo :
+   #  Entrance Exams -> Setup -> Enrance Exams Formunun Çalışmasını test ediniz
+   #  1 sınav girişi yapıp
+   #  sonrasında silmesini yapınız
+   #  Yukarıdaki adımları 4 farklı değer seti için tekrarlatınız.
