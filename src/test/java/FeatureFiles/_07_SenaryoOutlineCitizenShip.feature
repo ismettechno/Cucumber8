@@ -6,6 +6,7 @@ Feature:  Citizenship Functionality
     Then User should login successfully
     And Navigate to CitizenShip
 
+  @Regression
   Scenario Outline: Create a Citizenship with parameter
     When Create a CitizenShip name as "<name>" shortkod as "<shortName>"
     Then Success message should be displayed
