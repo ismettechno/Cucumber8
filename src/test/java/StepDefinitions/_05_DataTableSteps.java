@@ -42,7 +42,6 @@ public class _05_DataTableSteps {
         }
     }
 
-
     @And("User delete the element from dialog")
     public void userDeleteTheElementFromDialog(DataTable silinecekler) {
         List<String> listSilinecekler= silinecekler.asList();
@@ -50,7 +49,6 @@ public class _05_DataTableSteps {
         for (int i = 0; i < listSilinecekler.size(); i++) {
             dc.deleteItem( listSilinecekler.get(i) );
         }
-
     }
 
     @And("User sending the Enter keys in Dialog")
