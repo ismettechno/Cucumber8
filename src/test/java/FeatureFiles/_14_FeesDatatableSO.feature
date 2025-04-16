@@ -8,6 +8,7 @@ Feature: Fees functionality Senaryo Outline
     When Enter username and password and click login button
     Then User should login successfully
 
+  @SmokeTest
   Scenario Outline: Fees create and delete functionality
 
     And Click on the Element LeftNav
