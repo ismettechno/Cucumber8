@@ -83,6 +83,7 @@ public class DialogContent extends ParentPage{
     }
 
     public void deleteItem(String deleteName){
+        GWD.getDriver().navigate().refresh(); // country nin sistem/yazılım tarafı hatasından dolayı konuldu.
         mySendKeys(searchInput,  deleteName);
         myClick(searchButton);
         wait.until(ExpectedConditions.elementToBeClickable(searchButton));

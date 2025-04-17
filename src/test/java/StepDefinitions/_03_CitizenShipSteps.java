@@ -48,6 +48,7 @@ public class _03_CitizenShipSteps {
 
     @When("user delete name as {string}")
     public void userDeleteNameAs(String name) {
+
        dc.deleteItem(name);
     }
 }

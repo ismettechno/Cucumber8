@@ -13,7 +13,6 @@ import org.testng.annotations.AfterClass;
 )
 public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
 
-
     @AfterClass
     public  static void writeExtendReport()
     {

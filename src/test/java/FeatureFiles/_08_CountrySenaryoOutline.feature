@@ -18,10 +18,10 @@ Feature:  Country Functionality
     Then Success message should be displayed
 
     Examples:
-      | name       | kod     |
-      | ismUlk122 | ismKod122 |
-#      | ismUlkesi2 | ismKod2 |
-#      | ismUlkesi3 | ismKod3 |
-#      | ismUlkesi4 | ismKod4 |
-#      | ismUlkesi5 | ismKod5 |
+      | name         | kod      |
+      | ismUlk124321 | ismKo412 |
+      | ismUlkesi2   | ismKod2  |
+      | ismUlkesi3   | ismKod3  |
+      | ismUlkesi4   | ismKod4  |
+      | ismUlkesi5   | ismKod5  |
 
