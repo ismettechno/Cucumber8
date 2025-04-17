@@ -68,3 +68,9 @@ https://www.youtube.com/watch?v=aU5daBh7YVA
              }
      }
 
+8-  PDF Report için gerekli işlem
+    extends.properties e aşağıdaki bölüm eklendi
+
+                #PDF Report
+                extent.reporter.pdf.start=true
+                extent.reporter.pdf.out=PdfReport.pdf
