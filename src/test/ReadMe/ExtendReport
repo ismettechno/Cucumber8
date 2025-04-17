@@ -14,3 +14,6 @@ https://www.youtube.com/watch?v=aU5daBh7YVA
 
 3- src/test/resources/extent.properties   dosyası resources klasörünün
    altına açılarak aşağıdaki 2 satır eklendi.
+
+   extent.reporter.spark.start=true
+   extent.reporter.spark.out=test-output/SparkReport/Spark.html
