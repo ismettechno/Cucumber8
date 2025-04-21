@@ -47,10 +47,10 @@ public class GWD {
 
         if (threadDriver.get() != null) // var ise
         {
-            threadDriver.get().quit();
-            WebDriver driver=threadDriver.get();
-            driver=null;
-            threadDriver.set(driver);
+            threadDriver.get().quit();           // tarayıcı kapat, hafızada(thread) değişken duruyor
+            WebDriver driver=threadDriver.get(); // thread de ki değişkeni al
+            driver=null;                         // değişkene NULL değerini ata
+            threadDriver.set(driver);            // thread e bu değişkeni set et
         }
     }
 
