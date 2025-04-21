@@ -20,6 +20,9 @@ public class GWD {
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
+        if (threadBrowserName.get() == null) // XML den çalışmayacak diğer testlerde tarayıcı boş geldiğinde
+            threadBrowserName.set("chrome");  // tarayıcı adı CHROME olarak default olsun
+
         switch (threadBrowserName.get()) {
             case "edge" : threadDriver.set(new EdgeDriver()); break;
             case "firefox" : threadDriver.set(new FirefoxDriver()); break;
