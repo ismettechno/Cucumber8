@@ -23,10 +23,20 @@ public class GWD {
         if (threadBrowserName.get() == null) // XML den çalışmayacak diğer testlerde tarayıcı boş geldiğinde
             threadBrowserName.set("chrome");  // tarayıcı adı CHROME olarak default olsun
 
-        switch (threadBrowserName.get()) {
-            case "edge" : threadDriver.set(new EdgeDriver()); break;
-            case "firefox" : threadDriver.set(new FirefoxDriver()); break;
-            default : threadDriver.set(new ChromeDriver());// bu thread e bir chrome oluştur ve set et
+        System.out.println(threadBrowserName.get());
+
+        if (threadDriver.get() == null) { //1 kez oluştur
+
+            switch (threadBrowserName.get()) {
+                case "edge":
+                    threadDriver.set(new EdgeDriver());
+                    break;
+                case "firefox":
+                    threadDriver.set(new FirefoxDriver());
+                    break;
+                default:
+                    threadDriver.set(new ChromeDriver());// bu thread e bir chrome oluştur ve set et
+            }
         }
 
         threadDriver.get().manage().window().maximize();  // bu hattaki driverı max et
