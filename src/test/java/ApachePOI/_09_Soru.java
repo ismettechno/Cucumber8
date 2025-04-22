@@ -14,6 +14,12 @@ package ApachePOI;
 // ...
 
 public class _09_Soru {
+    public static void main(String[] args) {
+
+        //if dosya yok ise yeni exceli oluştur ve ilk satırı yaz
+        //else dosya var ise excel in sonuna satır ekle
 
 
+
+    }
 }
