@@ -8,7 +8,10 @@ package ApachePOI;
 // File dosya=new File(path)
 // if ( dosya.exists() )    dosya var ise
 
-
+// Merhaba Dünya 1
+// Merhaba Dünya 2
+// Merhaba Dünya 3
+// ...
 
 public class _09_Soru {
 
