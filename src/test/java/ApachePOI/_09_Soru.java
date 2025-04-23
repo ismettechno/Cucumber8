@@ -24,8 +24,8 @@ import java.io.IOException;
 public class _09_Soru {
     public static void main(String[] args) throws IOException {
         String path="src/test/java/ApachePOI/resource/YeniExcel2.xlsx";
-        File dosya=new File(path);
 
+        File dosya=new File(path);
         if (!dosya.exists())  // dosya yok ise
         {
             XSSFWorkbook workbook=new XSSFWorkbook();
