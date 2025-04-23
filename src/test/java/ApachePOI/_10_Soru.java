@@ -41,7 +41,7 @@ public class _10_Soru {
                 Cell hucre5= yeniSatir.createCell(4); hucre5.setCellValue(i*j);
             }
 
-            Row yeniSatir= sheet.createRow(satirNo++);
+            sheet.createRow(satirNo++); // boş bir satır ekle
         }
 
         // kaydetme işlemi
