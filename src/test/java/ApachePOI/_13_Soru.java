@@ -71,6 +71,8 @@ public class _13_Soru {
                 Cell cell1 = row.createCell(0);cell1.setCellValue(senaryoAdi);
                 Cell cell2 = row.createCell(1);cell2.setCellValue(testSonuc);
 
+                inputStream.close();
+
                 FileOutputStream outputStream = new FileOutputStream(path);
                 workbook.write(outputStream);
                 workbook.close();
