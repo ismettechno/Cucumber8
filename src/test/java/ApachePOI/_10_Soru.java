@@ -1,6 +1,7 @@
 package ApachePOI;
 
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileOutputStream;
@@ -17,7 +18,7 @@ public class _10_Soru {
         String path = "src/test/java/ApachePOI/resource/carpimTablosu.xlsx";
 
         XSSFWorkbook workbook=new XSSFWorkbook();
-        Sheet sheet= workbook.createSheet("Sayfa1");
+        XSSFSheet sheet= workbook.createSheet("Sayfa1");
 
         int yeniSatirIndex=0;
         for (int i = 1; i < 10; i++) {
