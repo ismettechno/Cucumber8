@@ -25,12 +25,15 @@ else
 public class _13_Soru {
     public static void main(String[] args) {
         String path="src/test/java/ApachePOI/resource/TestSonuclari.xlsx";
+        String senaryoAdi="Create Country";
         String testSonuc="Test Passed";
 
-        writeToExcel(path, testSonuc); //excel create
-        writeToExcel(path, testSonuc); //dosya artık var ekleyecek
-        writeToExcel(path, testSonuc); //dosya artık var ekleyecek
-        writeToExcel(path, testSonuc); //dosya artık var ekleyecek
-        writeToExcel(path, testSonuc); //dosya artık var ekleyecek
+        writeToExcel(path, senaryoAdi, testSonuc); //excel create
+        writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
+        writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
+        writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
+        writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
     }
+
+
 }
