@@ -22,6 +22,14 @@ else
 
  */
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 public class _13_Soru {
     public static void main(String[] args) {
         String path="src/test/java/ApachePOI/resource/TestSonuclari.xlsx";
@@ -34,6 +42,52 @@ public class _13_Soru {
         writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
         writeToExcel(path, senaryoAdi, testSonuc); //dosya artık var ekleyecek
     }
+
+    public static void writeToExcel(String path, String senaryoAdi, String testSonuc){
+        File dosya=new File(path);
+
+        try {
+            if (!dosya.exists()) {
+                XSSFWorkbook workbook = new XSSFWorkbook();
+                XSSFSheet sheet = workbook.createSheet("TestSonuc");
+
+                Row row = sheet.createRow(0);
+                Cell cell1 = row.createCell(0);cell1.setCellValue(senaryoAdi);
+                Cell cell2 = row.createCell(1);cell2.setCellValue(testSonuc);
+
+                FileOutputStream outputStream = new FileOutputStream(path);
+                workbook.write(outputStream);
+                workbook.close();
+                outputStream.close();
+                System.out.println("Dosya oluşturuldu.");
+            }
+            else
+            {
+                FileInputStream inputStream=new FileInputStream(path);
+                Workbook workbook= WorkbookFactory.create(inputStream);
+                Sheet sheet= workbook.getSheetAt(0);
+
+                Row row = sheet.createRow(sheet.getPhysicalNumberOfRows());
+                Cell cell1 = row.createCell(0);cell1.setCellValue(senaryoAdi);
+                Cell cell2 = row.createCell(1);cell2.setCellValue(testSonuc);
+
+                FileOutputStream outputStream = new FileOutputStream(path);
+                workbook.write(outputStream);
+                workbook.close();
+                outputStream.close();
+                System.out.println("Ekleme yapıldı");
+            }
+
+        }
+        catch (Exception ex){
+            System.out.println("ex.getMessage() = " + ex.getMessage());
+        }
+
+
+
+    }
+
+
 
 
 }
