@@ -1,0 +1,18 @@
+package _JDBC;
+
+import org.testng.annotations.Test;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class _02_Soru_2 extends JDBCParent{
+
+    @Test
+    public void Test1() throws SQLException {
+        ResultSet stg=sorguEkrani.executeQuery("select * from city");
+
+        while (stg.next())
+            System.out.println(stg.getString("city"));
+    }
+
+}
