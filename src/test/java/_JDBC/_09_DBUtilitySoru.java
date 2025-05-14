@@ -3,9 +3,7 @@ package _JDBC;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class _09_DBUtilitySoru {
@@ -16,9 +14,16 @@ public class _09_DBUtilitySoru {
     public static void main(String[] args) {
         // Gönderilen sorgu sonucundaki tüm datayı bir List olarak döndüren metodu yazınız.
 
-        String sorguSql="select * from language";
+        String sorguSql="select first_name, last_name from customer";
 
         ArrayList< ArrayList<String> > donenData= getListData(sorguSql);
+
+        for(ArrayList<String> satir : donenData) {
+            for (String kolonItem : satir)
+                System.out.print(kolonItem + "\t");
+
+            System.out.println();
+        }
 
     }
 
@@ -26,8 +31,23 @@ public class _09_DBUtilitySoru {
         ArrayList< ArrayList<String> > donecekTablo=new ArrayList<>();
         DBConnectionOpen();
 
-        // gelen sorguyu alıp , DB den çalıştırıp, donecek tabloya atınız.
+        try {
+            ResultSet rs = sorguEkrani.executeQuery(sorgu);
+            ResultSetMetaData rsmd = rs.getMetaData();
+            // gelen sorguyu alıp , DB den çalıştırıp, donecek tabloya atınız.
+            while (rs.next()) {
+                ArrayList<String> satir = new ArrayList<>();
+                for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+                    satir.add(rs.getString(i));
+                }
 
+                donecekTablo.add(satir);
+            }
+        }
+        catch (Exception ex)
+        {
+            System.out.println("ex.getMessage() = " + ex.getMessage());
+        }
 
         DBConnectionClose();
         return  donecekTablo;
