@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        tags = "@SmokeTest or @Regression",
+        tags = "@Regression",
         features = { "src/test/java/FeatureFiles"},  // hepsi demek
         glue = {"StepDefinitions"}
 )
