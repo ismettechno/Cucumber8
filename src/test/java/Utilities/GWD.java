@@ -37,7 +37,6 @@ public class GWD {
                     break;
                 default:
                     if (isRunningOnJenkins()) {
-                        // madem jenkins de çalışıyorsun max boyutta ve başlıksız çalış
                         //Jenkins için Chrome memory maximize edildi ve hafızada çalışır hale getirildi
                         ChromeOptions ChromeOptions = new ChromeOptions();
                         ChromeOptions.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
@@ -48,15 +47,11 @@ public class GWD {
                     {
                         threadDriver.set(new ChromeDriver());// bu thread e bir chrome oluştur ve set et
                     }
-
-
-
             }
         }
 
         threadDriver.get().manage().window().maximize();  // bu hattaki driverı max et
         threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
 
         return threadDriver.get();
     }
